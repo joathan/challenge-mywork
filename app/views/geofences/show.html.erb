@@ -1,0 +1,28 @@
+<% provide :head_tags do %>
+  <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      initMapGeoFence(<%=@geofence.lat%>, <%=@geofence.lng%>, <%=@geofence.radius%>)
+    });
+  </script>
+<% end %>
+
+<div class="alert alert-success" role="alert">
+  <%= notice %>
+</div>
+
+<div class="row justify-content-center">
+  <div class="text-center">
+    <div class="card" style="width: 18rem;">
+      <div id="map"></div>
+      <div class="card-body">
+        <h5 class="card-title"><%= @geofence.description %></h5>
+        <strong>Lat:</strong><p><%= @geofence.lat %></p>
+        <strong>Lng:</strong><p><%= @geofence.lng %></p>
+        <strong>Radius:</strong><p><%= @geofence.radius %></p>
+        <%= link_to 'Edit', edit_geofence_path(@geofence), class: "btn btn-info" %> |
+        <%= link_to 'Back', geofences_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+</div>

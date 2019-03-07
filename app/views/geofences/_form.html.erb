@@ -1,0 +1,53 @@
+<% provide :head_tags do %>
+ <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+      document.addEventListener("DOMContentLoaded", geoFence);
+  </script>
+<% end %>
+
+<%= form_with(model: geofence, local: true) do |form| %>
+  <% if geofence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(geofence.errors.count, "error") %> prohibited this geofence from being saved:</h2>
+
+      <ul>
+        <% geofence.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="row">
+<div class="col-4 float-left">
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :lat %>
+    <%= form.text_field :lat, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :lng %>
+    <%= form.text_field :lng, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :radius %>
+    <span>in meters</span>
+    <%= form.number_field :radius, class: "form-control" %>
+  </div>
+
+  <div class="form-group float-left">
+    <%= form.submit class: "btn btn-success"  %>
+  </div>
+</div>
+<div class="col-8 float-left">
+  <div id="map2"></div>
+</div>
+</div>
+</div>
+<% end %>
