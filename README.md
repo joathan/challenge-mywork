@@ -45,7 +45,6 @@ npm install
 Delete file ***config/credentials.yml.enc***
 
 ```shell
-rm config/master.key
 rm config/credentials.yml.enc
 ```
 

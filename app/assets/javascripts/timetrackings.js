@@ -1,5 +1,5 @@
-let lat_origin;
-let lng_origin;
+// let lat_origin;
+// let lng_origin;
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -12,8 +12,8 @@ function getLocation() {
 function initMapTimetracking(position) {
   let lat = position.coords.latitude;
   let lng = position.coords.longitude;
-  lat_origin = lat;
-  lng_origin = lng;
+  // lat_origin = lat;
+  // lng_origin = lng;
 
   document.getElementById('timetracking_lat').value = lat;
   document.getElementById('timetracking_lng').value = lng;
@@ -43,8 +43,9 @@ function initMapTimetracking(position) {
   // when input values change call refreshMarker
   document.getElementById('timetracking_lat').onchange = refreshMarker;
   document.getElementById('timetracking_lng').onchange = refreshMarker;
-  lat_origin = lat;
-  lng_origin = lng;
+  // lat_origin = document.getElementById('timetracking_lat').onchange;
+  // lng_origin = document.getElementById('timetracking_lng').onchange;
+
   // when marker is dragged update input values
   marker.addListener('drag', function() {
     latlng = marker.getPosition();
@@ -68,8 +69,8 @@ $(document).ready(function(){
       $.get("http://localhost:3000/timetrackings/distance?radius="+data.radius+
       "&lat="+data.lat+
       "&lng="+data.lng+
-      "&lat_origin="+lat_origin+
-      "&lng_origin="+lng_origin, function(result){
+      "&lat_origin="+document.getElementById('timetracking_lat').value+
+      "&lng_origin="+document.getElementById('timetracking_lng').value, function(result){
         $("#submit").attr('disabled', result);
       });
     });
