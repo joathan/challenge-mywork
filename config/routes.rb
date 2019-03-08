@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'timetrackings#index'
 
   get 'collaborators/search', to: 'collaborators#search', as: 'collaborators_search'
   get 'timetrackings/distance', to: 'timetrackings#distance', as: 'timetrackings_distance'
