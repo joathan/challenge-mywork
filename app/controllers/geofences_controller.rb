@@ -17,18 +17,6 @@ class GeofencesController < ApplicationController
     @geofence = Geofence.new
   end
 
-  def searches
-    @geofence = Geofence.within(
-        params[:radius],
-        :units => :meters,
-        :origin => [
-            params[:lat],
-            params[:lng]
-        ]
-    )
-    render json: @geofence.to_json
-  end
-
   # GET /geofences/1/edit
   def edit
   end

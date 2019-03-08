@@ -19,15 +19,15 @@
 
   <tbody>
     <% @timetrackings.each do |timetracking| %>
-      <tr>
-        <td><%= timetracking.created_at.strftime("%d/%m/%Y") %></td>
-        <td><%= timetracking.created_at.strftime("%H:%M") %></td>
-        <td><%= timetracking.collaborator.name %></td>
-        <td><%= timetracking.description %></td>
-        <td><%= link_to 'Show', timetracking %></td>
-        <td><%= link_to 'Edit', edit_timetracking_path(timetracking) %></td>
-        <td><%= link_to 'Destroy', timetracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= timetracking.created_at.strftime("%d/%m/%Y") %></td>
+      <td><%= timetracking.created_at.strftime("%H:%M") %></td>
+      <td><%= timetracking.collaborator.name %></td>
+      <td><%= timetracking.description %></td>
+      <td><%= link_to 'Show', timetracking %></td>
+      <td><%= link_to 'Edit', edit_timetracking_path(timetracking) %></td>
+      <td><%= link_to 'Destroy', timetracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
