@@ -36,6 +36,33 @@ Run to download the gems
 bundle install
 ```
 
+Run to install bootstrap, jquery, and popper.js
+
+```shell
+npm install
+```
+
+Delete the files. ***config / master.key*** and ***config / credentials.yml.enc***
+
+```shell
+rm config/master.key
+rm config/credentials.yml.enc
+```
+
+Run to create the credentials (*I used atom as the default editor*)
+
+```shell
+EDITOR=atom rails credentials:edit
+```
+
+Add the end of the ***xxx.credentials.yml*** file to the bottom line.
+
+```yaml
+google_maps_api_key: AIzaSyAWWPJ-0J2NFBY6JycCjSF5d1hRvd1MaNM
+```
+
+> *I used my google maps API, it will soon be deactivated.*
+
 Edit the database file, with the data of your server.
 
 ***challenge-mywork/config/database.yml***
@@ -74,6 +101,10 @@ http://localhost:3000
 ​	The gem **geokit-rails** was used in order to facilitate the calculation of the distance between two points.
 
 ​	**Yarn** was used to facilitate the management of **Bootstrap**, **jQuery** and **Popper.js**
+
+
+
+
 
 
 
@@ -119,13 +150,32 @@ Execute para baixar as gems
 bundle install
 ```
 
+Execute para instalar bootstrap, jquery e popper.js
+
 ```shell
 npm install
 ```
 
+Exclua os arquivos. ***config/master.key*** e ***config/credentials.yml.enc***
+
+```shell
+rm config/master.key
+rm config/credentials.yml.enc
+```
+
+Execute para criar as credenciais (*Usei o atom como editor padrão*)
+
 ```shell
 EDITOR=atom rails credentials:edit
 ```
+
+Adicione no final do arquivo ***xxx.credentials.yml*** a linha a baixo.
+
+```yaml
+google_maps_api_key: AIzaSyAWWPJ-0J2NFBY6JycCjSF5d1hRvd1MaNM
+```
+
+> *Usei minha API do google maps, em breve será desativada.*
 
 Edite o arquivo do banco de dados, com os dados do seu servidor.
 
@@ -135,7 +185,7 @@ Edite o arquivo do banco de dados, com os dados do seu servidor.
 default: &default
   adapter: postgresql      # Banco de dados a ser utilizado
   encoding: unicode		
-  username: joathan	       # Usuário do seu banco de dados
+  username: joathan        # Usuário do seu banco de dados
   password:                # Senha do seu banco de dados
   host: localhost		
   port: 5432               # Porta padrão do banco de dados
