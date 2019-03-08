@@ -5,13 +5,20 @@ MyWork Challenge
 **Setup:**
 
 ​	Ruby - 2.5.1
+
 ​	Rails - 5.2.2
+
 ​	PostgreSQL - 11.2
+
 ​	Bootstrap - 4.3.1
+
 ​	jQuery - 3.3.1
+
 ​	Popper.js - 1.14.7
 
 **GEMs:**
+
+Add to file challenge-mywork/Gemfile
 
 ```shell
 gem 'geokit-rails'
@@ -37,12 +44,12 @@ challenge-mywork/config/database.yml***
 
 ```yaml
 default: &default
-  adapter: postgresql 	# Banco de dados a ser utilizado
+  adapter: postgresql     # Database to be used
   encoding: unicode		
-  username: joathan		# Usuário do seu banco de dados
-  password:				# Senha do seu banco de dados
-  host: localhost		# Local onde está seu banco de dados
-  port: 5432			# Porta padrão do banco de dados
+  username: joathan       # User of your database
+  password:               # Password for your database
+  host: localhost         
+  port: 5432              # Default database port
 ...
 ```
 
@@ -63,13 +70,20 @@ Desafio MyWork.
 **Setup:**
 
 ​	Ruby - 2.5.1
+
 ​	Rails - 5.2.2
+
 ​	PostgreSQL - 11.2
+
 ​	Bootstrap - 4.3.1
+
 ​	jQuery - 3.3.1
+
 ​	Popper.js - 1.14.7
 
 **GEMs:**
+
+Adicione no arquivo challenge-mywork/Gemfile
 
 ```shell
 gem 'geokit-rails'
@@ -95,12 +109,12 @@ Edite o arquivo do banco de dados, com os dados do seu servidor.
 
 ```yaml
 default: &default
-  adapter: postgresql 	# Banco de dados a ser utilizado
+  adapter: postgresql      # Banco de dados a ser utilizado
   encoding: unicode		
-  username: joathan		# Usuário do seu banco de dados
-  password:				# Senha do seu banco de dados
-  host: localhost		# Local onde está seu banco de dados
-  port: 5432			# Porta padrão do banco de dados
+  username: joathan	       # Usuário do seu banco de dados
+  password:                # Senha do seu banco de dados
+  host: localhost		
+  port: 5432               # Porta padrão do banco de dados
 ...
 ```
 
