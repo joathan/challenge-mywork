@@ -42,7 +42,7 @@ Run to install bootstrap, jquery, and popper.js
 npm install
 ```
 
-Delete the files. ***config / master.key*** and ***config / credentials.yml.enc***
+Delete file ***config/credentials.yml.enc***
 
 ```shell
 rm config/master.key
@@ -52,7 +52,7 @@ rm config/credentials.yml.enc
 Run to create the credentials (*I used atom as the default editor*)
 
 ```shell
-EDITOR=atom rails credentials:edit
+EDITOR="atom --wait" rails credentials:edit
 ```
 
 Add the end of the ***xxx.credentials.yml*** file to the bottom line.
@@ -156,17 +156,16 @@ Execute para instalar bootstrap, jquery e popper.js
 npm install
 ```
 
-Exclua os arquivos. ***config/master.key*** e ***config/credentials.yml.enc***
+Exclua o arquivo ***config/credentials.yml.enc***
 
 ```shell
-rm config/master.key
 rm config/credentials.yml.enc
 ```
 
 Execute para criar as credenciais (*Usei o atom como editor padrão*)
 
 ```shell
-EDITOR=atom rails credentials:edit
+EDITOR="atom --wait"  rails credentials:edit
 ```
 
 Adicione no final do arquivo ***xxx.credentials.yml*** a linha a baixo.

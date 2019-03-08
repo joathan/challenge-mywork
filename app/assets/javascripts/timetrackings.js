@@ -43,7 +43,8 @@ function initMapTimetracking(position) {
   // when input values change call refreshMarker
   document.getElementById('timetracking_lat').onchange = refreshMarker;
   document.getElementById('timetracking_lng').onchange = refreshMarker;
-
+  lat_origin = lat;
+  lng_origin = lng;
   // when marker is dragged update input values
   marker.addListener('drag', function() {
     latlng = marker.getPosition();
