@@ -119,6 +119,14 @@ Execute para baixar as gems
 bundle install
 ```
 
+```shell
+npm install
+```
+
+```shell
+EDITOR=atom rails credentials:edit
+```
+
 Edite o arquivo do banco de dados, com os dados do seu servidor.
 
 ***challenge-mywork/config/database.yml***
