@@ -6,16 +6,16 @@
     <%= csp_meta_tag %>
 
     <%= tag :meta, name: :psj, action: action_name, controller: controller_name %>
-    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key='+Rails.application.credentials.google_maps_api_key %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key='+Rails.application.credentials.google_maps_api_key %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    
     <%= yield(:head_tags) %>
 
   </head>
 
-  <%= content_tag :body, data: { action: action_name, controller: controller_name } do %>
+  <%#= content_tag :body, data: { action: action_name, controller: controller_name } do %>
 
     <body>
     <%= render partial: 'layouts/nav' %>
@@ -23,5 +23,5 @@
         <%= yield %>
       </main>
     </body>
-  <% end %>
+  <%# end %>
 </html>
