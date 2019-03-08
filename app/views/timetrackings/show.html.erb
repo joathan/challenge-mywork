@@ -1,0 +1,24 @@
+<% provide :head_tags do %>
+  <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+      document.addEventListener("DOMContentLoaded", function(){
+          initMapGeoFence(<%=@timetracking.lat%>, <%=@timetracking.lng%>)
+      });
+  </script>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row justify-content-center">
+  <div class="text-center">
+    <div class="card" style="width: 18rem;">
+      <div id="map"></div>
+      <div class="card-body">
+        <h5 class="card-title"><%= @timetracking.collaborator.name %></h5>
+        <strong>Description:</strong><p><%= @timetracking.description %></p>
+        <%= link_to 'Edit', edit_timetracking_path(@timetracking), class: "btn btn-info" %> |
+        <%= link_to 'Back', timetrackings_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+</div>

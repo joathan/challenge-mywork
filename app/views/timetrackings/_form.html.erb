@@ -1,0 +1,55 @@
+<% provide :head_tags do %>
+  <meta name='turbolinks-visit-control' content='reload'>
+  <script>
+      document.addEventListener("DOMContentLoaded", getLocation);
+  </script>
+<% end %>
+
+<%= form_with(model: timetracking, local: true) do |form| %>
+  <% if timetracking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(timetracking.errors.count, "error") %> prohibited this timetracking from being saved:</h2>
+
+      <ul>
+      <% timetracking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <%= form.label :collaborator_id %>
+          <%= form.select :collaborator_id, Collaborator.all.collect { |c| [c.name, c.id] },
+                          {prompt: "Collaborator..."}, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <%= form.hidden_field :lat, class: "form-control" %>
+          <%= form.hidden_field :lng, class: "form-control" %>
+          <%= form.label :description %>
+          <%= form.text_area :description, class: "form-control", required: true %>
+        </div>
+
+      </div>
+    </div>
+      <div class="row justify-content-center">
+        <div class="text-center">
+          <div class="form-group">
+            <%= form.submit 'check-in', class: "btn btn-success", id: "submit", disabled: true %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div id="map"></div>
+      </div>
+    </div>
+
+<% end %>

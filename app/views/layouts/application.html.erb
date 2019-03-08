@@ -19,8 +19,10 @@
 
     <body>
     <%= render partial: 'layouts/nav' %>
-      <main role="main">
-        <%= yield %>
+      <main role="main" id="all">
+        <div class="container">
+          <%= yield %>
+        </div>
       </main>
     </body>
   <%# end %>
