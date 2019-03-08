@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row justify-content-center">
+  <div class="text-center">
+    <div class="card" style="width: 18rem;">
+      <img src="../../img/avatar-user.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= @collaborator.name %></h5>
+        <%= link_to 'Edit', edit_collaborator_path(@collaborator), class: "btn btn-info" %> |
+        <%= link_to 'Back', collaborators_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+</div>
