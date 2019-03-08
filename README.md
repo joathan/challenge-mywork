@@ -16,14 +16,6 @@ MyWork Challenge
 
 ​	Popper.js - 1.14.7
 
-**GEMs:**
-
-Add to file challenge-mywork/Gemfile
-
-```shell
-gem 'geokit-rails'
-```
-
 **Install:**
 
 Clone the project
@@ -38,6 +30,12 @@ Enter the project folder
 cd challenge-mywork
 ```
 
+Add to file ***challenge-mywork/Gemfile***
+
+```shell
+gem 'geokit-rails'
+```
+
 Run to download the gems
 
 ```sh
@@ -46,7 +44,7 @@ bundle install
 
 Edit the database file, with the data of your server.
 
-challenge-mywork/config/database.yml***
+***challenge-mywork/config/database.yml***
 
 ```yaml
 default: &default
@@ -105,14 +103,6 @@ Desafio MyWork.
 
 ​	Popper.js - 1.14.7
 
-**GEMs:**
-
-Adicione no arquivo challenge-mywork/Gemfile
-
-```shell
-gem 'geokit-rails'
-```
-
 **Instalação:**
 
 Clonar o projeto
@@ -125,6 +115,12 @@ Entre na pasta do projeto
 
 ```shell
 cd challenge-mywork
+```
+
+Adicione no arquivo ***challenge-mywork/Gemfile***
+
+```shell
+gem 'geokit-rails'
 ```
 
 Execute para baixar as gems
