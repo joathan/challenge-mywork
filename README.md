@@ -30,12 +30,6 @@ Enter the project folder
 cd challenge-mywork
 ```
 
-Add to file ***challenge-mywork/Gemfile***
-
-```shell
-gem 'geokit-rails'
-```
-
 Run to download the gems
 
 ```sh
@@ -83,6 +77,8 @@ http://localhost:3000
 
 
 
+
+
 #### pt-BR
 
 ------
@@ -115,12 +111,6 @@ Entre na pasta do projeto
 
 ```shell
 cd challenge-mywork
-```
-
-Adicione no arquivo ***challenge-mywork/Gemfile***
-
-```shell
-gem 'geokit-rails'
 ```
 
 Execute para baixar as gems
