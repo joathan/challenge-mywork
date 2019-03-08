@@ -12,6 +12,13 @@ class CollaboratorsController < ApplicationController
   def show
   end
 
+  def search
+    @collaborator = Collaborator.find(params[:id])
+    @geofance = Geofence.find(@collaborator.geofence_id)
+    render json: @geofance.to_json
+
+  end
+
   # GET /collaborators/new
   def new
     @collaborator = Collaborator.new
@@ -69,6 +76,6 @@ class CollaboratorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def collaborator_params
-      params.require(:collaborator).permit(:name)
+      params.require(:collaborator).permit(:name, :geofence_id)
     end
 end

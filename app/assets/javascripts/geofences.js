@@ -45,12 +45,6 @@ function geoFence() {
         document.getElementById('geofence_lat').value = newlat;
         document.getElementById('geofence_lng').value = newlng;
     });
-
-    // When drag ends, center (pan) the map on the marker position
-    marker.addListener('dragend', function() {
-        map.panTo(marker.getPosition());
-    });
-
 }
 
 function initMapGeoFence(lat, lng, radius) {
