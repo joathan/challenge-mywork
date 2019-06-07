@@ -21,6 +21,9 @@ class GeofencesController < ApplicationController
   def edit
   end
 
+  def teste
+  end
+
   # POST /geofences
   # POST /geofences.json
   def create
