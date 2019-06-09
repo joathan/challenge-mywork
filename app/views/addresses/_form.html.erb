@@ -1,0 +1,78 @@
+<%= form_with(model: address, local: true) do |form| %>
+  <% if address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
+
+      <ul>
+      <% address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col">
+      <%= form.label :lat %>
+      <%= form.text_field :lat, class: 'form-control' %>
+    </div>
+
+    <div class="col">
+      <%= form.label :lon %>
+      <%= form.text_field :lon, class: 'form-control'  %>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <%= form.label :place %>
+      <%= form.text_field :place, class: 'form-control'  %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <%= form.label :zip_code %>
+      <%= form.text_field :zip_code, class: 'form-control'  %>
+    </div>
+
+    <div class="col">
+      <%= form.label :state %>
+      <%= form.text_field :state, class: 'form-control'  %>
+    </div>
+
+    <div class="col">
+      <%= form.label :city %>
+      <%= form.text_field :city, class: 'form-control'  %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <%= form.label :number %>
+      <%= form.text_field :number, class: 'form-control'  %>
+    </div>
+
+    <div class="col">
+      <%= form.label :complement %>
+      <%= form.text_field :complement, class: 'form-control'  %>
+    </div>
+
+    <div class="col">
+      <%= form.label :bairro %>
+      <%= form.text_field :bairro, class: 'form-control'  %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <%= form.submit %>
+    </div>
+    <div>
+      <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" />
+    </div>
+  </div>
+
+  <div id="mapa" style="height: 500px; width: 500px"></div>
+<% end %>

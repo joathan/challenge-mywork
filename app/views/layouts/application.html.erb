@@ -6,7 +6,7 @@
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key='+Rails.application.credentials.google_maps_api_key+'&libraries=places', defer: true, async: true %>
+  <%= javascript_include_tag 'http://maps.googleapis.com/maps/api/js?result_type=street_address&key='+Rails.application.credentials.google_maps_api_key+'&amp;' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <%= yield(:head_tags) %>
